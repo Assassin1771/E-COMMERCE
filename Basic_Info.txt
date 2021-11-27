@@ -1,0 +1,3 @@
+Created a Complete Full Stack Application on the theme E-Commerce Store.
+
+I have used React, Redux and Ant Design for designing the FrontEnd and User Interface. Then I have used Firebase for User Authentication. The backend is handled with the help of Node and MongoDB.
