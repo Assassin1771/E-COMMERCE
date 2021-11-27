@@ -1,0 +1,10 @@
+Created a Complete Full Stack Application on the theme E-Commerce Store.
+
+I have used React, Redux and Ant Design for designing the FrontEnd and User Interface. Then I have used Firebase for User Authentication. The backend is handled with the help of Node and MongoDB.
+
+FAQ:
+1. Why given Add to Cart option before Login?
+To show that website is user friendly and it is human tendency to look for items and add to cart, instead of logging or signing up first.
+
+2. Types of Users?
+Only 2, One is admin and other are normal customers. Both have different dashboards.
