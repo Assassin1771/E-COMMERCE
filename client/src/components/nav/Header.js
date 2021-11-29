@@ -4,24 +4,38 @@ import {
   MailOutlined,
   AppstoreOutlined,
   SettingOutlined,
+  UserOutlined,
+  UserAddOutlined,
 } from "@ant-design/icons";
 
-const { SubMenu } = Menu;
+const { SubMenu, Item } = Menu;
 
 const Header = () => {
-  const [current, setCurrent] = useState("");
+  const [current, setCurrent] = useState("Home");
 
-  const handleClick = () => {};
+  const handleClick = (e) => {
+    // console.log(e.key);
+    setCurrent(e.key);
+  };
 
   return (
     <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-      <Menu.Item key="mail" icon={<MailOutlined />}>
+      <Item key="Home" icon={<AppstoreOutlined />}>
         Home
-      </Menu.Item>
-      <SubMenu key="SubMenu" icon={<SettingOutlined />} title="Register">
-        <Menu.Item key="setting:1">Option 1</Menu.Item>
-        <Menu.Item key="setting:2">Option 2</Menu.Item>
+      </Item>
+
+      <SubMenu key="SubMenu" icon={<SettingOutlined />} title="Username">
+        <Item key="setting:1">Option 1</Item>
+        <Item key="setting:2">Option 2</Item>
       </SubMenu>
+
+      <Item key="Login" icon={<UserOutlined />} className="float-right">
+        Login
+      </Item>
+
+      <Item key="Register" icon={<UserAddOutlined />} className="float-right">
+        Register
+      </Item>
     </Menu>
   );
 };
