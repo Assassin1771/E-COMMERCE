@@ -8,6 +8,8 @@ import {
   UserAddOutlined,
 } from "@ant-design/icons";
 
+import { Link } from "react-router-dom";
+
 const { SubMenu, Item } = Menu;
 
 const Header = () => {
@@ -21,7 +23,7 @@ const Header = () => {
   return (
     <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
       <Item key="Home" icon={<AppstoreOutlined />}>
-        Home
+        <Link to="/">Home </Link>
       </Item>
 
       <SubMenu key="SubMenu" icon={<SettingOutlined />} title="Username">
@@ -30,11 +32,11 @@ const Header = () => {
       </SubMenu>
 
       <Item key="Login" icon={<UserOutlined />} className="float-right">
-        Login
+        <Link to="/login">Login </Link>
       </Item>
 
       <Item key="Register" icon={<UserAddOutlined />} className="float-right">
-        Register
+        <Link to="/register">Register </Link>
       </Item>
     </Menu>
   );
